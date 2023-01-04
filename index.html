@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mystyle.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+class Player{
+    active = true;
+    dribble(){
+        console.log("this ${this.name} is dribbling up the court");
+    }
+
+    layup(){
+        console.log("this ${this.name} is driving to the hoop for a layup");
+    }
+
+}
+
+class Shooter extends Player{
+    name = "steph";
+   
+    splash(){
+        console.log("this ${this.name} just splashed a three pointer!");
+    }
+
+}
+
+class Forward extends Player{
+    name = "Looney";
+   
+    setPick(){
+        console.log("this ${this.name} just set an offensive pick for the guard");
+    }
+
+}
+
+class Center extends Player {
+    name = "Green";
+
+    alley(){
+        console.log("this ${this.name} just dunked an alley-oop");
+    }
+
+}
+
+const shooter = new Shooter();
+const forward = new Forward();
+const center = new Center();
+
+console.log(shooter.active);
+shooter.dribble();
+shooter.layup();
+shooter.splash();
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

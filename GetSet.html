@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mystyle.css">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        class Player {
+            constructor (_name, _number, _position, _rotation) {
+                console.log("Golden State Warriors");
+                this.name = _name;
+                this.number = _number;
+                this.position = _position;
+                this.rotation = _rotation;
+            }
+
+            describe (){
+                console.log('I am ${this.name} and I am wearing number ${this.number}');
+            }
+
+            active(){
+                console.log("${this.name} scored a point!");
+            }
+
+            inactive(){
+                console.log("${this.name} is now playing on the bench");
+            }
+
+            injury(){
+                console.log("${this.name} Is out with an injury");
+            }
+
+        }
+    
+        const player1 = new Player("Jordan Poole", 3, "Point Guard", "Starter");
+        const player2 = new Player("Klay Thompson", 11, "Shooting Guard", "Starter");
+        const player3 = new Player("Andrew Wiggins", 22, "Forward", "Starter");
+        const player4 = new Player("Jordan Poole", 3, "Shooting Guard", "Starter");
+        const player5 = new Player("Draymond Green", 23, "Small Forward", "Starter");
+        const player6 = new Player("Kevon Looney", 5, "Center", "Starter");
+        const player7 = new Player("James Wiseman", 33, "Center", "off-the-bench")
+        const player8 = new Player("Step Curry", 33, "Shooting Guard", "+Injured");
+
+        console.log(player1.name);
+        console.log(player1.number);
+        console.log(player1.position);
+        console.log(player1.rotation);
+        player1.active();
+
+        console.log(player7.name);
+        console.log(player7.number);
+        console.log(player7.position);
+        console.log(player7.rotation);
+        player7.inactive();
+
+        console.log(player8.name);
+        console.log(player8.number);
+        console.log(player8.position);
+        console.log(player8.rotation);
+        player8.injury();
+
+
+    </script>
+    
+</body>
+</html>
